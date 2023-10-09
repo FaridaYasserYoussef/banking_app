@@ -198,7 +198,7 @@ class _MakeTransfersScreenState extends State<MakeTransfersScreen> {
                           ),
 
                           validator: (value) {
-                            if(double.parse(value.toString()) > widget.senderData.balance){
+                            if(double.parse(value.toString()) > transferController.senderBalance){
                               return "There is not enough \n money in your balance";
                             }
                             if(double.parse(value.toString()) < 0){
